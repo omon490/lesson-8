@@ -1,0 +1,54 @@
+.box {
+  opacity: 1;
+}
+
+.alert-text {
+  line-height: 36px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  animation-name: move;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.elItem-class {
+  position: relative;
+  z-index: 1;
+}
+
+.input-check {
+  margin-right: 12px;
+  position: absolute;
+  opacity: 0;
+  left: 2px;
+  top: 3px;
+}
+
+.input-check:checked ~ .item-span {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.circle-span {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 12px;
+  border: 1px solid #000;
+}
+
+.input-check:checked + .circle-span {
+  background-color: blue;
+}
+
+@keyframes move {
+  from {
+    color: black;
+  }
+  to {
+    color: red;
+  }
+}
